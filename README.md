@@ -82,8 +82,8 @@ GitHub: [@Carlostala04](https://github.com/Carlostala04)
 
 ## © Derechos de autor
 
-© 2026 [Nombre de la Barbería]. Todos los derechos reservados.
+© 2026 [CrisBarber]. Todos los derechos reservados.
 
-Este software y su contenido (diseño, código fuente, marca y materiales asociados) son propiedad exclusiva de **[Nombre de la Barbería]**, propietario del negocio. Queda prohibida su reproducción, distribución o modificación total o parcial sin autorización previa y por escrito del propietario.
+Este software y su contenido (diseño, código fuente, marca y materiales asociados) son propiedad exclusiva de **[CrisBarber]**, propietario del negocio. Queda prohibida su reproducción, distribución o modificación total o parcial sin autorización previa y por escrito del propietario.
 
 El desarrollo técnico de esta aplicación fue realizado por Carlos Talavera Guerrero, quien cede los derechos de uso comercial del sistema al propietario de la barbería conforme a lo acordado entre las partes.
