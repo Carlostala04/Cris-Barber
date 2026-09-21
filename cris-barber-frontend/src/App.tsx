@@ -1,5 +1,5 @@
 
-import {Routes } from 'react-router-dom'
+import {Route, Routes } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Routes>
-      
+      <Route path='/' element={"/"}/>
     </Routes>
     </>
   )
