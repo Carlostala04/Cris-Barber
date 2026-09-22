@@ -1,58 +1,110 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* =========================
+     COLORES PRINCIPALES
+     ========================= */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --color-white: #ffffff;
+  --color-black: #111111;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-gray-50: #f7f7f7;
+  --color-gray-100: #eeeeee;
+  --color-gray-200: #dcdcdc;
+  --color-gray-300: #bdbdbd;
+  --color-gray-400: #999999;
+  --color-gray-500: #777777;
+  --color-gray-600: #555555;
+  --color-gray-700: #3a3a3a;
+  --color-gray-800: #242424;
+  --color-gray-900: #161616;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  /* =========================
+     BRANDING CRISBARBER
+     ========================= */
+
+  --color-primary: #ffffff;
+  --color-secondary: #bdbdbd;
+
+  --color-background: #111111;
+  --color-background-secondary: #1a1a1a;
+
+  --color-surface: #242424;
+  --color-surface-hover: #303030;
+
+  --color-text: #ffffff;
+  --color-text-secondary: #bdbdbd;
+  --color-text-muted: #888888;
+
+  --color-border: #3a3a3a;
+
+  /* =========================
+     ESTADOS
+     ========================= */
+
+  --color-success: #4caf50;
+  --color-danger: #e53935;
+  --color-warning: #f0ad4e;
+
+  /* =========================
+     TIPOGRAFÍA
+     ========================= */
+
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+
+  /* =========================
+     BORDES
+     ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* =========================
+     SOMBRAS
+     ========================= */
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* =========================
+     TRANSICIONES
+     ========================= */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* =========================
+     CONTENEDOR
+     ========================= */
+
+  --container-width: 1200px;
+  --container-padding: 1.5rem;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-
-body{
+body {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
 }
