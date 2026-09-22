@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { imagesHero } from "../assets/data/images";
-
+import "../styles/home.css"
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
