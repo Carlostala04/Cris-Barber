@@ -107,4 +107,9 @@ body {
   position: relative;
   overflow-x: hidden;
   font-family: var(--font-primary);
+  background-color: #111111;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
