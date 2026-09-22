@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
 }
 
 .hero-section {
@@ -26,8 +25,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mask-image: linear-gradient(to left, #111111 -60%, transparent);
-    animation: cambiarImagen 300ms;
+    mask-image:
+      
+      linear-gradient(to bottom, #111111 -80%, transparent);
+    animation: cambiarImagen 500ms;
   }
 }
 
@@ -61,7 +62,7 @@
     font-weight: 500;
     background-color: var(--color-gray-500);
     color: #000;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
   }
 
   button:hover {
