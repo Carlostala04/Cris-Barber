@@ -50,22 +50,6 @@
   justify-content: center;
   gap: 50px;
 
-  button {
-    width: 200px;
-    height: 70px;
-    border-color: transparent;
-    border-radius: 10px;
-    font-size: 19px;
-    font-family: var(--font-sans);
-    background-color: var(--color-gray-500);
-    color: #000;
-    transition: transform 0.2s ease;
-  }
-
-  button:hover {
-    box-shadow: 0px 0px 15px 15px rgba(148, 147, 147, 0.5);
-    transform: translateY(-10px);
-  }
 }
 
 .team-section {
