@@ -1,0 +1,58 @@
+.card {
+  width: 300px;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-container {
+  background: url(../assets/mancha.png) center center/cover no-repeat;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  transition: filter 0.2s ease;
+
+  img {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    transition: hover 2s ease;
+    transition:
+      transform 0.2s ease,
+      scale 0.2s ease;
+    mask-image: linear-gradient(to bottom, #999999 80%, transparent);
+  }
+}
+
+.card-body {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h3,
+  h4 {
+    color: #999999;
+  }
+}
+
+.card:hover .img-container{
+    filter: drop-shadow(5px 6px 7px #999999);
+}
+
+.card:hover .img-container img{
+    transform: translateY(-10px);
+  scale: 1.3;
+}
+
+.card:hover h3{
+    -webkit-text-stroke:0.1px #999999;
+}
+
+.card:hover h4{
+    -webkit-text-stroke:0.1px #999999;
+}
