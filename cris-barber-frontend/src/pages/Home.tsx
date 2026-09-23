@@ -55,19 +55,15 @@ export default function Home() {
 
   return (
     <div className="home">
-      <section className="hero-section">
+      <section id="inicio" className="hero-section">
         <h1>Tu estilo nuestra firma</h1>
         <img
           src={imagesHero[currentIndex]}
           alt=""
           className={`hero-image ${isFading ? "fade-out" : "fade-in"}`}
         />
-        <div className="hero-actions">
-          <button>Agendar cita</button>
-          <button>Contactanos</button>
-        </div>
       </section>
-      <section className="team-section">
+      <section id="conocenos" className="team-section">
         <header className="team-section-header">
           <h3>
             <span className="line"></span>Equipo
