@@ -50,9 +50,9 @@
 }
 
 .card:hover h3{
-    -webkit-text-stroke:0.1px #999999;
+    -webkit-text-stroke:0.1px #dad6d648;
 }
 
 .card:hover h4{
-    -webkit-text-stroke:0.1px #999999;
+    -webkit-text-stroke:0.1px #dad6d648;
 }
