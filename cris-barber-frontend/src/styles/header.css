@@ -1,0 +1,52 @@
+.header {
+  padding-top: 40px;
+  width: 100%;
+  background-color: #00000000;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* animation: header-animation linear both;
+  animation-timeline: scroll();
+  animation-range: 0 500px; */
+}
+
+ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+ul li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+li a {
+  font-family: var(--font-display);
+  text-decoration: none;
+  color: #999999;
+  font-size: 18px;
+}
+
+li a:hover {
+  color: #ffffff;
+  
+}
+
+/* @keyframes header-animation {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    background-color: rgba(48, 47, 47, 0.75);
+    backdrop-filter: blur(10px);
+  }
+} */
