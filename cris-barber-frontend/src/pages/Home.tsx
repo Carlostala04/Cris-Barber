@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { imagesHero } from "../assets/data/images";
 import "../styles/home.css";
-import imagen from "../assets/imagenPrueba.png"
+import imagen from "../assets/imagenPrueba.png";
 import TeamCard from "../components/teamCard";
+import { Map } from "../assets/icons/mapa";
+import Whatsapp from "../assets/icons/whatsapp";
+import Phone from "../assets/icons/phone";
+import Instagram from "../assets/icons/instagram";
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -85,6 +89,41 @@ export default function Home() {
               imagen={team.imagen}
             />
           ))}
+        </div>
+      </section>
+      <section className="contact-us">
+        <div className="find">
+          <h2>Encuentranos</h2>
+          <div className="location">
+            <div className="location-description">
+              <Map />
+              <h4>Direccion: </h4>
+              <p>9a. Calle NE, Nandaime, Nicaragua</p>
+            </div>
+            <div className="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4836.763919829361!2d-86.05271072413109!3d11.76292564022204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7416d6f759e941%3A0xf9bfa93ab7e03b7d!2s9a.%20Calle%20NE%2C%20Nandaime%2C%20Nicaragua!5e1!3m2!1sen!2scr!4v1790224983912!5m2!1sen!2scr"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div className="schedule">
+          <h3>Horarios</h3>
+          <h4>Lunes - viernes</h4>
+          <a href="">Agenda tu cita</a>
+          </div>
+        </div>
+        <span className="separator"></span>
+        <div className="contact">
+          <h2>Contactanos</h2>
+          <div className="icons-contact">
+          <Whatsapp />
+          <Phone/>
+          <Instagram/>
+          </div>
         </div>
       </section>
     </div>
