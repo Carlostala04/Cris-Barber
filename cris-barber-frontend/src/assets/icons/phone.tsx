@@ -1,12 +1,12 @@
 import React from "react";
 
-export function BaselinePhone(props) {
+export function Phone(props) {
   return (
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="2em"
+      height="2em"
       viewBox="0 0 24 24"
       data-info="(505) 77665431"
     >
@@ -19,4 +19,4 @@ export function BaselinePhone(props) {
   );
 }
 
-export default BaselinePhone;
+export default Phone;
