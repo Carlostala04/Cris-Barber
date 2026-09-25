@@ -11,7 +11,7 @@ export default function Header() {
           <a href="#conocenos">Conocenos</a>
         </li>
         <li>
-          <a href="">Contactanos</a>
+          <a href="#contactanos">Contactanos</a>
         </li>
         <li>
           <a href="">Agenda tu cita</a>
