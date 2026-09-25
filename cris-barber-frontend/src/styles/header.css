@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* animation: header-animation linear both;
+  animation: header-animation linear both;
   animation-timeline: scroll();
-  animation-range: 0 500px; */
+  animation-range: 500px 0;
 }
 
 ul {
@@ -26,7 +26,7 @@ ul li {
   display: flex;
   margin-bottom: 10px;
 }
-
+  
 li a {
   font-family: var(--font-display);
   text-decoration: none;
@@ -39,7 +39,7 @@ li a:hover {
   
 }
 
-/* @keyframes header-animation {
+@keyframes header-animation {
   from {
     background-color: transparent;
     backdrop-filter: blur(0px);
@@ -49,4 +49,4 @@ li a:hover {
     background-color: rgba(48, 47, 47, 0.75);
     backdrop-filter: blur(10px);
   }
-} */
+}
