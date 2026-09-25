@@ -91,13 +91,13 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="contact-us">
+      <section id="contactanos" className="contact-us">
+        <h2 className="contact-us-title">Encuentranos</h2>
         <div className="find">
-          <h2>Encuentranos</h2>
           <div className="location">
             <div className="location-description">
               <Map />
-              <h4>Direccion: </h4>
+              <h3>Direccion: </h3>
               <p>9a. Calle NE, Nandaime, Nicaragua</p>
             </div>
             <div className="map">
@@ -111,18 +111,24 @@ export default function Home() {
             </div>
           </div>
           <div className="schedule">
-          <h3>Horarios</h3>
-          <h4>Lunes - viernes</h4>
-          <a href="">Agenda tu cita</a>
+            <h3>Horarios</h3>
+            <h4>Lunes - viernes</h4>
+            <a href="">Agenda tu cita</a>
           </div>
         </div>
         <span className="separator"></span>
         <div className="contact">
           <h2>Contactanos</h2>
           <div className="icons-contact">
-          <Whatsapp />
-          <Phone/>
-          <Instagram/>
+            <a id="whattsapp" data-info="Whattsapp" href="">
+              <Whatsapp />
+            </a>
+            <a id="phone" data-info="(505) 77665431" href="">
+              <Phone />
+            </a>
+            <a id="instagram" data-info="@CrisBarber" href="">
+              <Instagram />
+            </a>
           </div>
         </div>
       </section>
