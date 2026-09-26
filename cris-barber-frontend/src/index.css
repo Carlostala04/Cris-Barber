@@ -128,3 +128,24 @@ h6 {
   font-family: var(--font-display);
   color: #fff;
 }
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(255, 255, 253);
+  color: var(--color-gray-600);
+  border-radius: 999px;
+  border-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: box-shadow 0.4s ease, background .4s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-gray-200);
+  box-shadow:
+    3px -4px 5px rgba(255, 255, 255, 0.637),
+    -4px 5px 4px rgba(255, 255, 255, 0.637);
+}
