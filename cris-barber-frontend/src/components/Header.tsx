@@ -7,7 +7,7 @@ export default function Header() {
     <header className="header">
       <ul>
         <li>
-          <a href="#inicio" onClick={()=>navigate("/")}>Inicio</a>
+          <a href="#inicio">Inicio</a>
         </li>
         <li>
           <a href="#conocenos">Conocenos</a>
