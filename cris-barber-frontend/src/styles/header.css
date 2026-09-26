@@ -31,7 +31,8 @@ li a {
   font-family: var(--font-display);
   text-decoration: none;
   color: #999999;
-  font-size: 18px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 li a:hover {
@@ -46,7 +47,7 @@ li a:hover {
   }
 
   to {
-    background-color: rgba(48, 47, 47, 0.75);
+    background-color: rgba(48, 47, 47, 0.178);
     backdrop-filter: blur(10px);
   }
 }
