@@ -1,0 +1,149 @@
+/* ===========================
+   REACT DATEPICKER - OVERRIDES
+   =========================== */
+
+/* Si quieres el acento dorado de tu diseño, agrega esto a tu :root */
+
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 20%;
+  height: 48px;
+  padding: 0 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  transition: border-color var(--transition-fast);
+}
+
+.react-datepicker__input-container input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.react-datepicker__input-container input:focus {
+  outline: none;
+  border-color: var(--color-accent, var(--color-gray-300));
+}
+
+/* Contenedor del calendario */
+.react-datepicker {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.react-datepicker__triangle {
+  display: none; /* la flechita del popover; queda más limpio sin ella */
+}
+
+/* Header (mes / año / flechas de navegación) */
+.react-datepicker__header {
+  background-color: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+}
+
+.react-datepicker__current-month {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.react-datepicker__day-names {
+  margin-top: 0.5rem;
+}
+
+.react-datepicker__day-name {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 2.2rem;
+}
+
+/* Flechas de navegación (mes anterior/siguiente) */
+.react-datepicker__navigation-icon::before {
+  border-color: var(--color-text-secondary);
+}
+
+.react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: var(--color-accent, var(--color-white));
+}
+
+/* Días del calendario */
+.react-datepicker__day {
+  color: var(--color-text);
+  width: 2.2rem;
+  line-height: 2.2rem;
+  border-radius: var(--radius-full);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--color-surface-hover);
+}
+
+/* Día seleccionado */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--color-gray-500);
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.react-datepicker__day--selected:hover,
+.react-datepicker__day--keyboard-selected:hover {
+  background-color: var(--color-accent, var(--color-gray-300));
+}
+
+/* Día de hoy */
+.react-datepicker__day--today {
+  font-weight: 700;
+  color: #ffff;
+}
+
+/* Días deshabilitados (domingos cerrado, minDate, etc.) */
+.react-datepicker__day--disabled {
+  color: var(--color-gray-700);
+  cursor: not-allowed;
+}
+
+.react-datepicker__day--disabled:hover {
+  background-color: transparent;
+}
+
+/* Días fuera del mes actual */
+.react-datepicker__day--outside-month {
+  color: var(--color-gray-700);
+}
+
+/* Selector de mes/año si usas showMonthDropdown / showYearDropdown */
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.react-datepicker__month-option,
+.react-datepicker__year-option {
+  color: var(--color-text);
+}
+
+.react-datepicker__month-option:hover,
+.react-datepicker__year-option:hover {
+  background-color: var(--color-surface-hover);
+}
