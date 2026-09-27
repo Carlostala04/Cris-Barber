@@ -3,11 +3,13 @@ import Leave from "../assets/icons/arrow";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../styles/appoinment.css"; // este archivo
+import { useNavigate } from "react-router-dom";
 
 interface AppointmentProps {
   onDateSelected: () => void;
 }
 export default function Appointment({ onDateSelected }: AppointmentProps) {
+  const navegate = useNavigate()
   const [fecha, setFecha] = useState(null);
 
   const handleChange = (date) => {
@@ -17,7 +19,7 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
   return (
     <div className="appointment">
       <header className="appointment-header">
-        <a href="">
+        <a onClick={()=>navegate("/")} href="">
           Volver <Leave />
         </a>
       </header>
