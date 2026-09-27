@@ -7,7 +7,7 @@ import { Map } from "../assets/icons/mapa";
 import Whatsapp from "../assets/icons/whatsapp";
 import Phone from "../assets/icons/phone";
 import Instagram from "../assets/icons/instagram";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 export default function Home() {
   const navigate = useNavigate();
@@ -118,22 +118,22 @@ export default function Home() {
             <div className="schedule">
               <h3>Horarios</h3>
               <h4>Lunes - viernes</h4>
-              <a href="" onClick={() => navigate("/cita")}>
-                Agenda tu cita
-              </a>
+             <Link to={"/cita"}>
+              Agenda tu cita
+             </Link>
             </div>
           </div>
           <span className="separator"></span>
           <div className="contact">
             <h2>Contactanos</h2>
             <div className="icons-contact">
-              <a id="whattsapp" data-info="Whattsapp" href="">
+              <a id="whattsapp" data-info="Whattsapp" href="#">
                 <Whatsapp />
               </a>
-              <a id="phone" data-info="(505) 77665431" href="">
+              <a id="phone" data-info="(505) 77665431" href="#">
                 <Phone />
               </a>
-              <a id="instagram" data-info="@CrisBarber" href="">
+              <a id="instagram" data-info="@CrisBarber" href="#">
                 <Instagram />
               </a>
             </div>

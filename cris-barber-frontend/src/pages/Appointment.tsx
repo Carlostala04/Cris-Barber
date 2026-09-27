@@ -3,25 +3,24 @@ import Leave from "../assets/icons/arrow";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../styles/appoinment.css"; // este archivo
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface AppointmentProps {
-  onDateSelected: () => void;
+  onDateSelected: (date: Date | null) => void;
 }
 export default function Appointment({ onDateSelected }: AppointmentProps) {
-  const navegate = useNavigate()
-  const [fecha, setFecha] = useState(null);
-
-  const handleChange = (date) => {
+  const navegate = useNavigate();
+  const [fecha, setFecha] = useState<Date | null>(null);
+  const handleChange = (date: Date | null) => {
     setFecha(date);
     onDateSelected?.(date);
   };
   return (
     <div className="appointment">
       <header className="appointment-header">
-        <a onClick={()=>navegate("/")} href="">
+        <Link to={"/"}>
           Volver <Leave />
-        </a>
+        </Link>
       </header>
       <form action="submit">
         <fieldset>
@@ -40,7 +39,7 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
                 locale={"es"}
                 dateFormat="dd/MM/yyyy"
                 minDate={new Date()}
-                filterDate={(date)=>date.getDay()!==0}
+                filterDate={(date) => date.getDay() !== 0}
                 placeholderText="Selecciona una fecha"
                 className="input-fecha"
               />

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/header.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function Header() {
   const navigate = useNavigate();
   return (
@@ -16,9 +16,9 @@ export default function Header() {
           <a href="#contactanos">Contactanos</a>
         </li>
         <li>
-          <a href="" onClick={() => navigate("/cita")}>
-            Agenda tu cita
-          </a>
+          <Link to={"/cita"}>
+          Agenda tu cita
+          </Link>
         </li>
       </ul>
     </header>
