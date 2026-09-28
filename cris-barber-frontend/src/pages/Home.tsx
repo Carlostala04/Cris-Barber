@@ -10,7 +10,7 @@ import Instagram from "../assets/icons/instagram";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 export default function Home() {
-  const navigate = useNavigate();
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const teamMembers = [
