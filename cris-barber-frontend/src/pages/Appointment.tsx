@@ -6,11 +6,20 @@ import "../styles/appoinment.css"; // este archivo
 import { Link } from "react-router-dom";
 import Scissors from "../assets/icons/scissors";
 import BarberClippers from "../assets/icons/razor";
+import Modal from "../components/Modal";
 
 interface AppointmentProps {
   onDateSelected: (date: Date | null) => void;
 }
 export default function Appointment({ onDateSelected }: AppointmentProps) {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModal = () => {
+    setShowModal((prev) => !prev);
+  };
+  const hanldeCloseModal = ()=>{
+    setShowModal(false)
+  }
   const servicios = [
     {
       nombre: "Corte clásico",
@@ -72,7 +81,7 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
           Volver <Leave />
         </Link>
       </header>
-      <form action="submit">
+      <form>
         <fieldset className="fieldset-user">
           <legend className="user-section-title">
             <Scissors /> <h2>Tus datos</h2>
@@ -101,7 +110,7 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
               <select id="select-time">
                 <option value="">Selecciona una hora</option>
               </select>
-              <BarberClippers/>
+              <BarberClippers />
             </div>
           </div>
           <div className="input-section barber">
@@ -109,7 +118,7 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
             <select id="select-barber">
               <option value="">Selecciona tu barbero</option>
             </select>
-            <BarberClippers/>
+            <BarberClippers />
           </div>
         </fieldset>
         <fieldset>
@@ -126,10 +135,18 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
                 </option>
               ))}
             </select>
-            <BarberClippers/>
+            <BarberClippers />
           </div>
         </fieldset>
-        <button type="submit">Agendar cita</button>
+        <button type="button" onClick={handleModal}>Agendar cita</button>
+        {showModal && (
+          <Modal
+            message="Prueba de modal"
+            title="Prueba"
+            type="error"
+            onAction={hanldeCloseModal}
+          />
+        )}
       </form>
     </div>
   );
