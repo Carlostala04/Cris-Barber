@@ -37,6 +37,7 @@
   h4 {
     color: #999999;
   }
+  opacity: 0;
 }
 
 .card:hover .img-container {
@@ -54,4 +55,18 @@
 
 .card:hover h4 {
   -webkit-text-stroke: 0.1px #dad6d648;
+}
+.card:hover .card-body{
+  animation: showBody .3s both;
+}
+
+@keyframes showBody {
+  from{
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
