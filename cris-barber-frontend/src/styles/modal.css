@@ -1,0 +1,48 @@
+.modal-container {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background-color: #ffffffd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+}
+.modal-container h3 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  color: var(--color-gray-700);
+}
+.modal-container p{
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-family: var(--font-sans);
+}
+.modal-container svg {
+  width: 11vw;
+  height: 11vh;
+  
+}
+.modal-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
+}
+.modal--error svg{
+    color: red;
+    animation: svgAnimation .5s alternate infinite;
+}
+.modal--success svg{
+    color: rgb(7, 224, 7);
+}
+@keyframes svgAnimation {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.5;
+    }
+}
