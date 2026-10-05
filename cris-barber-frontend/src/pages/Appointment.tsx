@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../styles/appoinment.css"; // este archivo
 import { Link } from "react-router-dom";
 import Scissors from "../assets/icons/scissors";
+import BarberClippers from "../assets/icons/razor";
 
 interface AppointmentProps {
   onDateSelected: (date: Date | null) => void;
@@ -70,18 +71,19 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
         <Link className="back-link" to={"/"}>
           Volver <Leave />
         </Link>
-        
       </header>
       <form action="submit">
-        <fieldset>
+        <fieldset className="fieldset-user">
           <legend className="user-section-title">
             <Scissors /> <h2>Tus datos</h2>
           </legend>
-          <label>Ingresa tu correo</label>
-          <input type="email" placeholder="ejemplo@gmail.com" />
+          <div className="input-section email">
+            <label>Ingresa tu correo</label>
+            <input type="email" placeholder="ejemplo@gmail.com" />
+          </div>
 
           <div className="fila">
-            <div>
+            <div className="date-picker-container">
               <label htmlFor="">Escoge una fecha</label>
               <DatePicker
                 selected={fecha}
@@ -94,31 +96,38 @@ export default function Appointment({ onDateSelected }: AppointmentProps) {
                 className="input-fecha"
               />
             </div>
-            <div>
+            <div className="hour-container">
               <label htmlFor="">Hora</label>
               <select id="select-time">
                 <option value="">Selecciona una hora</option>
               </select>
+              <BarberClippers/>
             </div>
           </div>
-          <label htmlFor="">Selecciona un barbero</label>
-          <select id="select-barber">
-            <option value="">Selecciona tu barbero</option>
-          </select>
+          <div className="input-section barber">
+            <label htmlFor="">Selecciona un barbero</label>
+            <select id="select-barber">
+              <option value="">Selecciona tu barbero</option>
+            </select>
+            <BarberClippers/>
+          </div>
         </fieldset>
         <fieldset>
-          <label htmlFor="">selecciona un servicio</label>
-          <legend className="service-sectuin-title">
+          <legend className="service-section-title">
             <Scissors /> <h2>Escoge el servivcio que desea</h2>
           </legend>
-          <select id="select-service">
-            <option value="">Selecciona el servicio</option>
-            {servicios.map((servicio) => (
-              <option value="">
-                {servicio.nombre} - {servicio.precio}
-              </option>
-            ))}
-          </select>
+          <div className="input-section service">
+            <label htmlFor="">selecciona un servicio</label>
+            <select id="select-service">
+              <option value="">Selecciona el servicio</option>
+              {servicios.map((servicio) => (
+                <option value="">
+                  {servicio.nombre} - {servicio.precio}
+                </option>
+              ))}
+            </select>
+            <BarberClippers/>
+          </div>
         </fieldset>
         <button type="submit">Agendar cita</button>
       </form>
