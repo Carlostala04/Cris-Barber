@@ -283,7 +283,6 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #fff;
   color: var(--color-primario);
   box-shadow: var(--sombra);
   transition:
