@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Leave from "../assets/icons/arrow";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "../styles/appoinment.css"; // este archivo
+import "../styles/appoinment.css"; 
 import { Link } from "react-router-dom";
 import Scissors from "../assets/icons/scissors";
 import BarberClippers from "../assets/icons/razor";
