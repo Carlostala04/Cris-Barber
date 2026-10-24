@@ -1,5 +1,5 @@
 import React from "react";
-import type { ModalType } from "../types/modalTypes";
+import type { ModalType } from "../ts/types/modalTypes";
 import Error from "../assets/icons/error";
 import Success from "../assets/icons/success";
 import "../styles/modal.css";
