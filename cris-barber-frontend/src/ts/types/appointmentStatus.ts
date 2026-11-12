@@ -1,1 +1,1 @@
-export type appointmentStatus = "cancelada" | "acpetada";
+export type appointmentStatus = "cancelada" | "aceptada" |"pendiente";
