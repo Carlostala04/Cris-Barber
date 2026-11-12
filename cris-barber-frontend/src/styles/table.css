@@ -1,0 +1,141 @@
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+/* Encabezado */
+table thead th {
+  position: sticky;
+  top: 0;
+  padding: 0.9rem 1rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Celdas */
+table tbody td {
+  padding: 0.85rem 1rem;
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Filas alternas y hover */
+table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+table tbody tr:hover {
+  background: var(--color-surface-hover);
+}
+
+table tbody tr:hover td {
+  color: var(--color-text);
+}
+
+/* Estado vacío (fila con colSpan) */
+table tbody td[colspan] {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* Columna de acciones */
+table th:last-child,
+table td:last-child {
+  text-align: center;
+}
+
+/* Botón de la tabla: anula el tamaño y la sombra del botón global */
+table td button {
+  width: auto;
+  height: auto;
+  padding: 0.45rem 1.1rem;
+  background: var(--color-primary);
+  color: var(--color-black);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  box-shadow: none;
+  transition: background-color var(--transition-fast), transform 0.1s ease;
+}
+
+table td button:hover {
+  background: var(--color-gray-200);
+  box-shadow: none;
+}
+
+table td button:active {
+  transform: scale(0.97);
+}
+
+table td button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Etiquetas de estado (opcional, se usan desde render) */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1px solid currentColor;
+}
+
+.badge--success {
+  color: var(--color-success);
+  background: rgba(76, 175, 80, 0.12);
+}
+
+.badge--warning {
+  color: var(--color-warning);
+  background: rgba(240, 173, 78, 0.12);
+}
+
+.badge--danger {
+  color: var(--color-danger);
+  background: rgba(229, 57, 53, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: var(--font-size-xs);
+  }
+
+  table thead th,
+  table tbody td {
+    padding: 0.65rem 0.75rem;
+  }
+}
